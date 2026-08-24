@@ -60,33 +60,33 @@
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="firstName">First Name *</label>
-                <input type="text" id="firstName" class="form-control" placeholder="Rajesh" required />
+                <input type="text" id="firstName" name="First Name" class="form-control" placeholder="Rajesh" required />
               </div>
               <div class="form-group">
                 <label class="form-label" for="lastName">Last Name</label>
-                <input type="text" id="lastName" class="form-control" placeholder="Sharma" />
+                <input type="text" id="lastName" name="Last Name" class="form-control" placeholder="Sharma" />
               </div>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="email">Email Address *</label>
-              <input type="email" id="email" class="form-control" placeholder="you@company.com" required />
+              <input type="email" id="email" name="Email" class="form-control" placeholder="you@company.com" required />
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" />
+                <input type="tel" id="phone" name="Phone Number" class="form-control" placeholder="+91 98765 43210" />
               </div>
               <div class="form-group">
                 <label class="form-label" for="city">City / State</label>
-                <input type="text" id="city" class="form-control" placeholder="Mumbai, Maharashtra" />
+                <input type="text" id="city" name="City / State" class="form-control" placeholder="Mumbai, Maharashtra" />
               </div>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="category">Product Category</label>
-              <select id="category" class="form-control">
+              <select id="category" name="Product Category" class="form-control">
                 <option value="" disabled selected>Select a category…</option>
                 <option>Textile Packaging</option>
                 <option>Cake &amp; Bakery Packaging</option>
@@ -99,11 +99,11 @@
 
             <div class="form-group">
               <label class="form-label" for="message">Your Requirement *</label>
-              <textarea id="message" class="form-control" placeholder="Describe your packaging requirement — material, size, quantity, print specifications, delivery location…" required></textarea>
+              <textarea id="message" name="Requirement" class="form-control" placeholder="Describe your packaging requirement — material, size, quantity, print specifications, delivery location…" required></textarea>
             </div>
 
             <div class="form-submit">
-              <button type="submit" class="btn btn-primary">Send Enquiry &rarr;</button>
+              <button type="submit" id="submitBtn" class="btn btn-primary">Send Enquiry &rarr;</button>
             </div>
 
             <p class="form-note">We keep your details confidential and never share them with third parties.</p>
@@ -149,7 +149,7 @@
             </div>
             <div>
               <div class="contact-info-label">Email</div>
-              <div class="contact-info-value">info@gurudevtraders.com</div>
+              <div class="contact-info-value">support.sarikachemical@gmail.com</div>
             </div>
           </div>
 
@@ -238,7 +238,7 @@
         </div>
         <div class="footer-contact-item">
           <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
-          info@gurudevtraders.com
+          support.sarikachemical@gmail.com
         </div>
       </div>
     </div>
@@ -253,14 +253,15 @@
 <script>
   function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
     const first = document.getElementById('firstName').value.trim();
     const email = document.getElementById('email').value.trim();
     const msg   = document.getElementById('message').value.trim();
 
     if (!first || !email || !msg) {
-      [['firstName','Name'],['email','Email'],['message','Message']].forEach(([id, label]) => {
+      [['firstName','First Name'],['email','Email'],['message','Message']].forEach(([id, label]) => {
         const el = document.getElementById(id);
         if (!el.value.trim()) {
           el.style.borderColor = 'var(--rust)';
@@ -272,10 +273,44 @@
     }
 
     const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
     const success = document.getElementById('formSuccess');
-    form.querySelectorAll('input,select,textarea,button').forEach(el => el.disabled = true);
-    success.classList.add('show');
-    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // UI state while submitting
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/support.sarikachemical@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // Disable input fields
+        form.querySelectorAll('input,select,textarea').forEach(el => el.disabled = true);
+        
+        // Hide or update the submit button state on success
+        submitBtn.style.display = 'none'; // Hides the button once sent
+        
+        // Show success message
+        success.classList.add('show');
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        alert("Submission failed. Please check your connection or try again.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "Send Enquiry &rarr;";
+      }
+    } catch (err) {
+      alert("Network error. Please try again.");
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = "Send Enquiry &rarr;";
+    }
   }
 </script>
 
