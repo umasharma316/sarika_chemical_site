@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Gurudev Traders</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/products.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════ -->
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-name">Sarika Chemical</span>
+        <span class="nav-logo-tagline">Packaging Solutions Since 1989</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════════════════ -->
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="../index.html">Home</a><span>/</span><span>Products</span>
+    </div>
+    <p class="eyebrow animate-up">Our Product Range</p>
+    <h1 class="section-title animate-up delay-1">Premium Packaging <em>Solutions</em></h1>
+    <p class="section-body animate-up delay-2">
+      From MDF boards to BOPP bags, every product is manufactured in-house with strict
+      quality control — available in custom sizes, specifications, and print finishes.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter tabs -->
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="filterCat('all', this)">All Products</button>
+      <button class="cat-tab" onclick="filterCat('textile', this)">Textile Packaging</button>
+      <button class="cat-tab" onclick="filterCat('bakery', this)">Cake &amp; Bakery</button>
+      <button class="cat-tab" onclick="filterCat('stationery', this)">Stationery</button>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════
+         CATEGORY 1 — Textile Packaging
+    ════════════════════════════════════════════════ -->
+    <div class="product-category" data-cat="textile">
+      <div class="cat-heading">
+        <div class="cat-name">Textile Packaging Solutions</div>
+        <div class="cat-desc">Complete range for thaan packing, garment, and industrial textile packaging with custom sizes and specifications.</div>
+      </div>
+      <hr class="cat-rule">
+
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">MDF Boards for Textile Thaan Packaging</div>
+            <div class="product-card-note">Available in all sizes, thicknesses &amp; weights. Custom specifications on request.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/mdf.jpg"
+                 alt="MDF Boards for Textile Packaging" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Corrugation Frames for Thaan Packing</div>
+            <div class="product-card-note">Customized specifications available to suit any thaan dimension and weight.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/corrugated-board.jpg"
+                 alt="Corrugation Frames" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">HDPE Bardaan Bags</div>
+            <div class="product-card-note">Available in plain and laminated variants for heavy-duty industrial packaging.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/HDPE-Sacks.webp"
+                 alt="HDPE Bardaan Bags" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">HDPE Yard Forms &amp; Roll Forms</div>
+            <div class="product-card-note">Designed for textile roll and yard packaging requirements of all dimensions.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/hdpe-roll.webp"
+                 alt="HDPE Roll Forms" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">LDPE Bags — Textile &amp; Industrial</div>
+            <div class="product-card-note">Flexible low-density polyethylene bags for varied textile and industrial applications.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/ldpe-bags.jpg"
+                 alt="LDPE Bags" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">BOPP Bags for Garment Packaging</div>
+            <div class="product-card-note">Crystal-clear polypropylene bags — ideal for premium garment presentation and retail.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/bopp-bags.jpg"
+                 alt="BOPP Garment Bags" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">BOPP Sheet Forms for Thaan Packing</div>
+            <div class="product-card-note">Flat BOPP sheet forms cut to your exact custom dimensions.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/bopp-film.jpg"
+                 alt="BOPP Sheet Forms" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Complete Textile Packaging Materials</div>
+            <div class="product-card-note">Full-kit packaging solutions for textile mills, wholesalers, and exporters.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/packing-all.jpg"
+                 alt="Complete Textile Packaging" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════
+         CATEGORY 2 — Cake & Bakery
+    ════════════════════════════════════════════════ -->
+    <div class="product-category" data-cat="bakery">
+      <div class="cat-heading">
+        <div class="cat-name">Cake &amp; Bakery Packaging</div>
+        <div class="cat-desc">Elegant, food-safe packaging solutions for bakers, patisseries, confectioners, and sweet shops.</div>
+      </div>
+      <hr class="cat-rule">
+
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">MDF Cake Bases</div>
+            <div class="product-card-note">All sizes, shapes &amp; thicknesses. Round, square, and custom cut available on request.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/mdf-cake-base.webp"
+                 alt="MDF Cake Bases" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Cake Boxes in Duplex Board</div>
+            <div class="product-card-note">Sturdy duplex board boxes — available in multiple grades, sizes, and finishes.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/cake-box.jpg"
+                 alt="Duplex Cake Boxes" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Premium ITC Grade Cake Boxes</div>
+            <div class="product-card-note">Superior finish using ITC-grade board for premium bakery branding and gifting.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/itc-cake-box.jpg"
+                 alt="Premium Cake Boxes" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Corrugated Cake Boxes</div>
+            <div class="product-card-note">Extra protection for transport — single and double-wall corrugated options available.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/corrugated-cake-box.jpg"
+                 alt="Corrugated Cake Boxes" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Customized Cake Packaging</div>
+            <div class="product-card-note">Branded designs with up to 6-colour in-house printing tailored to your bakery identity.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/custom-cake-box.jpg"
+                 alt="Custom Cake Packaging" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════
+         CATEGORY 3 — Stationery
+    ════════════════════════════════════════════════ -->
+    <div class="product-category" data-cat="stationery">
+      <div class="cat-heading">
+        <div class="cat-name">Stationery Products</div>
+        <div class="cat-desc">Quality stationery and printed board solutions for educational institutions and corporate clients.</div>
+      </div>
+      <hr class="cat-rule">
+
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Exam Pads</div>
+            <div class="product-card-note">Sturdy exam writing pads in various sizes — bulk supply available for institutions.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/exam-pad.jpg"
+                 alt="Exam Pads" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-text">
+            <div class="product-card-name">Customized Printed Boards</div>
+            <div class="product-card-note">Branded boards and packaging materials with custom print finishes and dimensions.</div>
+          </div>
+          <div class="product-card-img">
+            <img src="../images/printed-exam-pad.webp"
+                 alt="Customized Printed Boards" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════
+         CUSTOM ORDER CTA
+    ════════════════════════════════════════════════ -->
+    <div class="custom-cta">
+      <div>
+        <div class="custom-cta-title">Need a Custom Specification?</div>
+        <div class="custom-cta-body">
+          We manufacture to your exact dimensions, GSM, print requirements, and quantity.
+          Reach out for a tailored quote — no minimum too large or too small.
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="flex-shrink:0;">Request a Quote &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Sarika Chemical</div>
+        <div class="footer-brand-tag">Trusted Since 1989</div>
+        <p class="footer-brand-desc">Complete packaging solutions for textile, bakery, stationery, and industrial sectors.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigate</p>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Categories</p>
+        <ul class="footer-links">
+          <li><a href="#">Textile Packaging</a></li>
+          <li><a href="#">Cake &amp; Bakery</a></li>
+          <li><a href="#">Stationery</a></li>
+          <li><a href="#">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="14" height="14">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+          </svg>
+          Sarika Chemical,
+          Gala no 2 , New Sainath Compound , Dapoda Road , Anjur fata , Bhiwandi - 421302 
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="14" height="14">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+          </svg>
+          info@sarikachemical.com
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>&copy; 2025 Sarika Chemical. All rights reserved.</span>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+
+  function filterCat(cat, btn) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product-category').forEach(c => {
+      c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

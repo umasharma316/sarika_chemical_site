@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Gurudev Traders</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-name">Gurudev Traders</span>
+        <span class="nav-logo-tagline">Packaging Solutions Since 1989</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html" class="active nav-cta">Contact Us</a></li>
+      </ul>
+      <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="../index.html">Home</a><span>/</span><span>Contact Us</span>
+    </div>
+    <p class="eyebrow animate-up">Reach Out</p>
+    <h1 class="section-title animate-up delay-1">Let's Work <em>Together</em></h1>
+    <p class="section-body animate-up delay-2">
+      Tell us your packaging requirement — custom sizes, materials, print specifications,
+      or bulk orders. Our team will respond within 24 hours.
+    </p>
+  </div>
+</div>
+
+<!-- CONTACT CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div>
+        <div class="contact-form-wrap">
+          <div class="form-title">Send Us a Message</div>
+          <div class="form-subtitle">We respond to all enquiries within one business day.</div>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name *</label>
+                <input type="text" id="firstName" class="form-control" placeholder="Rajesh" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Sharma" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address *</label>
+              <input type="email" id="email" class="form-control" placeholder="you@company.com" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="city">City / State</label>
+                <input type="text" id="city" class="form-control" placeholder="Mumbai, Maharashtra" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="category">Product Category</label>
+              <select id="category" class="form-control">
+                <option value="" disabled selected>Select a category…</option>
+                <option>Textile Packaging</option>
+                <option>Cake &amp; Bakery Packaging</option>
+                <option>Stationery Products</option>
+                <option>Custom / Industrial Packaging</option>
+                <option>Printing &amp; Branding</option>
+                <option>Other Enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Your Requirement *</label>
+              <textarea id="message" class="form-control" placeholder="Describe your packaging requirement — material, size, quantity, print specifications, delivery location…" required></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send Enquiry &rarr;</button>
+            </div>
+
+            <p class="form-note">We keep your details confidential and never share them with third parties.</p>
+
+            <div class="form-success" id="formSuccess">
+              ✓ Thank you! Your enquiry has been received. We'll be in touch within 24 hours.
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="contact-sidebar">
+
+        <!-- Locations -->
+        <div class="contact-info-card">
+          <div class="contact-info-title">Our Locations</div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Bhiwandi Unit</div>
+              <div class="contact-info-value">Bhiwandi, Thane District<br>Maharashtra, India</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Murbad Unit</div>
+              <div class="contact-info-value">Murbad, Thane District<br>Maharashtra, India</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">info@gurudevtraders.com</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hours -->
+        <div class="contact-info-card">
+          <div class="contact-info-title">Working Hours</div>
+          <div class="hours-row"><span>Monday – Saturday</span><span>9:00 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Half Day</span></div>
+          <div class="hours-row"><span>Public Holidays</span><span>Closed</span></div>
+        </div>
+
+        <!-- Why us quick hits -->
+        <div class="contact-info-card">
+          <div class="contact-info-title">Why Order With Us</div>
+          <div class="why-item" style="padding:12px 0;">
+            <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="why-text">Custom sizes &amp; specifications</div>
+          </div>
+          <div class="why-item" style="padding:12px 0;">
+            <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="why-text">Up to 6-colour in-house printing</div>
+          </div>
+          <div class="why-item" style="padding:12px 0;">
+            <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="why-text">PAN India delivery</div>
+          </div>
+          <div class="why-item" style="padding:12px 0;border-bottom:none;">
+            <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="why-text">Trusted since 1989</div>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder">
+          <div class="map-grid-bg"></div>
+          <div class="map-pin-wrap">
+            <div class="map-pin-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+            </div>
+            <div class="map-pin-label">Gurudev Traders</div>
+            <div class="map-pin-sub">Bhiwandi &amp; Murbad, Maharashtra</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Gurudev Traders</div>
+        <div class="footer-brand-tag">Trusted Since 1989</div>
+        <p class="footer-brand-desc">Complete packaging solutions for textile, bakery, stationery, and industrial sectors.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigate</p>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Products</p>
+        <ul class="footer-links">
+          <li><a href="products.html">Textile Packaging</a></li>
+          <li><a href="products.html">Cake &amp; Bakery</a></li>
+          <li><a href="products.html">Stationery</a></li>
+          <li><a href="products.html">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          Gurudev Traders & Sarika Chemical,
+          Gala no 2 , New Sainath Compound , Dapoda Road , Anjur fata , Bhiwandi - 421302 
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          info@gurudevtraders.com
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>&copy; 2025 Gurudev Traders. All rights reserved.</span>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const first = document.getElementById('firstName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg   = document.getElementById('message').value.trim();
+
+    if (!first || !email || !msg) {
+      [['firstName','Name'],['email','Email'],['message','Message']].forEach(([id, label]) => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) {
+          el.style.borderColor = 'var(--rust)';
+          el.placeholder = label + ' is required';
+          setTimeout(() => { el.style.borderColor = ''; }, 3000);
+        }
+      });
+      return;
+    }
+
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    form.querySelectorAll('input,select,textarea,button').forEach(el => el.disabled = true);
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+
+</body>
+</html>

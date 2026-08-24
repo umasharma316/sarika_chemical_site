@@ -1,0 +1,220 @@
+/* ============================================================
+   GURUDEV TRADERS — Products Page Styles
+   css/products.css
+   ============================================================ */
+
+/* ── Page hero ───────────────────────────────────────────────────── */
+.page-hero {
+  background: var(--cream);
+  padding: 80px 0 72px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 50%; height: 100%;
+  background: radial-gradient(ellipse 60% 80% at 100% 80%, rgba(107,62,31,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.page-hero-inner { position: relative; z-index: 1; }
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+.page-breadcrumb a { color: var(--gold); }
+.page-breadcrumb a:hover { text-decoration: underline; }
+.page-breadcrumb span { opacity: 0.5; }
+
+/* ── Category tabs ───────────────────────────────────────────────── */
+.cat-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.cat-tab {
+  padding: 10px 24px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border-hi);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: 0.04em;
+}
+
+.cat-tab:hover,
+.cat-tab.active {
+  background: var(--warm-dark);
+  border-color: var(--warm-dark);
+  color: var(--ivory);
+}
+
+/* ── Category block ──────────────────────────────────────────────── */
+.product-category {
+  margin-bottom: 80px;
+}
+
+/* Category heading area — matches screenshot: title left, desc below */
+.cat-heading {
+  margin-bottom: 28px;
+}
+
+.cat-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.cat-desc {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.65;
+  max-width: 600px;
+}
+
+.cat-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  border: none;
+  margin-bottom: 28px;
+}
+
+/* ── Product grid — 3 columns like screenshot ────────────────────── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ── Product card — name+desc on top, image fills bottom ─────────── */
+.product-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: rgba(107,62,31,0.28);
+}
+
+/* Text portion */
+.product-card-text {
+  padding: 20px 20px 16px;
+  flex-shrink: 0;
+}
+
+.product-card-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--warm-dark);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.product-card-note {
+  font-size: 12.5px;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+/* Image portion — fills remaining height */
+.product-card-img {
+  flex: 1;
+  min-height: 180px;
+  max-height: 220px;
+  overflow: hidden;
+  background: var(--tan);
+  position: relative;
+}
+
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-card-img img {
+  transform: scale(1.05);
+}
+
+/* Placeholder when no real image — shows a styled fallback */
+.product-card-img.no-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--tan), var(--cream));
+  font-size: 52px;
+  min-height: 180px;
+}
+
+/* ── Custom CTA ──────────────────────────────────────────────────── */
+.custom-cta {
+  background: linear-gradient(135deg, var(--warm-dark), #4a2e14);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.custom-cta-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ivory);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.custom-cta-body {
+  font-size: 14px;
+  color: rgba(253,248,242,0.65);
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .custom-cta { flex-direction: column; text-align: center; }
+  .custom-cta-body { max-width: 100%; }
+}
+
+@media (max-width: 580px) {
+  .products-grid { grid-template-columns: 1fr; }
+  .product-card-img { min-height: 200px; max-height: 240px; }
+}

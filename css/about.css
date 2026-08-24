@@ -1,0 +1,243 @@
+/* ============================================================
+   GURUDEV TRADERS — About Page Styles
+   css/about.css
+   ============================================================ */
+
+/* ── Story section ───────────────────────────────────────────────── */
+.story-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+
+.story-left {}
+
+.story-right {}
+
+.story-quote {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--warm-dark);
+  line-height: 1.65;
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin: 32px 0;
+}
+
+.story-founders {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.founder-card {
+  flex: 1;
+  padding: 24px 20px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.founder-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #FDF8F2;
+}
+
+.founder-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--warm-dark);
+  margin-bottom: 4px;
+}
+
+.founder-role {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* Timeline */
+.timeline-section {
+  background: var(--cream);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  max-width: 680px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), rgba(107,62,31,0.1));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -34px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ivory);
+  border: 2px solid var(--gold);
+}
+
+.timeline-year {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.timeline-event {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--warm-dark);
+  margin-bottom: 6px;
+}
+
+.timeline-detail {
+  font-size: 13px;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* Manufacturing section */
+.manufacturing-section {
+  background: var(--ivory);
+}
+
+.mfg-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.mfg-capabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.mfg-cap-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  transition: border-color var(--transition);
+}
+
+.mfg-cap-card:hover { border-color: rgba(107,62,31,0.35); }
+
+.mfg-cap-icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.mfg-cap-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--warm-dark);
+  line-height: 1.4;
+}
+
+/* Vision / Mission */
+.vision-mission-section {
+  background: var(--warm-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-mission-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(107,62,31,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.vm-card {
+  padding: 60px 52px;
+  border: 1px solid rgba(253,248,242,0.08);
+}
+
+.vm-card:first-child { border-right: 1px solid rgba(253,248,242,0.08); }
+
+.vm-tag {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+}
+
+.vm-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ivory);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.vm-body {
+  font-size: 15px;
+  color: rgba(253,248,242,0.65);
+  line-height: 1.85;
+}
+
+/* Responsive about */
+@media (max-width: 900px) {
+  .story-layout  { grid-template-columns: 1fr; gap: 48px; }
+  .mfg-layout    { grid-template-columns: 1fr; gap: 48px; }
+  .vm-grid       { grid-template-columns: 1fr; }
+  .vm-card:first-child { border-right: none; border-bottom: 1px solid rgba(253,248,242,0.08); }
+  .vm-card       { padding: 44px 32px; }
+}
+
+@media (max-width: 600px) {
+  .story-founders   { flex-direction: column; }
+  .mfg-capabilities { grid-template-columns: 1fr; }
+}
